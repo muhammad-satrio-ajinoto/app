@@ -1,0 +1,73 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width , initial-scale=1.0">
+
+				<!-- load bootstrap css -->
+				<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+					<!-- load jquery and bootstrap js -->
+					<script src="assets/js/jquery.min.js"></script>
+					<script src="assets/js/popper.min.js"></script>
+					<script src="assets/js/bootstrap.js"></script>
+				</head>
+
+				<script>
+					function dol()
+					{
+					var ugrupiah = document.getElementById("rupiah").value;
+					var ugdollar = (ugrupiah / 13000);
+					document.getElementById("dollar").value = ugdollar;
+					}
+
+					function rup()
+					{
+					var ugdollar = document.getElementById("dollar").value;
+					var ugrupiah = (ugdollar * 13000);
+					document.getElementById("rupiah").value = ugrupiah;
+					}
+					
+					
+				</script>
+				<body>
+					<div class="container">
+
+						<div class="alert alert-warning alert-dismissible" align="center">							
+							<strong>PENTING    </strong>
+							<h4>SMK TELKOM MALANG</h4>
+							<strong>PENTING</strong>
+						</div>
+
+
+						<div class="container">
+							<div class="row">
+								<h1 class="text-left mx-auto">Membuat Konversi Dollar dan Rupiah</h1>
+
+								<div class="col-sm-6">
+									<div class="card">
+										<div class="card-header font-italic">
+											INPUT RUPIAH
+										</div>
+										<div class="card-body">
+											<h6 class="card-title">Silahkan Input Nilai Rupiah</h6>
+											<input type="text" class="form-control" id="rupiah" id="a" placeholder="Input Rupiah">												
+												<button type="button" class="btn btn-primary mt-3" onclick="dol()">KONVERSI</button>     													
+											</div>																					
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="card">
+											<div class="card-header font-italic">
+												INPUT DOLLAR
+											</div>
+											<div class="card-body">
+												<h6 class="card-title">Silahkan Input Nilai Dollar</h6>
+												<input type="text" class="form-control" id="dollar" placeholder="Input Dollar">
+													<button type="button" class="btn btn-warning mt-3" onclick="rup()">KONVERSI</button>             
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</body>
+						</html>
